@@ -50,8 +50,6 @@ class ClientPrefs {
 	];
 
 	public static var comboOffset:Array<Int> = [0, 0, 0, 0];
-	public static var keSustains:Bool = false; //i was bored, okay?
-	
 	public static var ratingOffset:Int = 0;
 	public static var sickWindow:Int = 45;
 	public static var goodWindow:Int = 90;
@@ -61,10 +59,10 @@ class ClientPrefs {
 	//Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx and Controls.hx
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		//Key Bind, Name for ControlsSubState
-		'note_left'		=> [D, LEFT],
-		'note_down'		=> [F, DOWN],
-		'note_up'		=> [J, UP],
-		'note_right'	=> [K, RIGHT],
+		'note_left'		=> [A, LEFT],
+		'note_down'		=> [S, DOWN],
+		'note_up'		=> [W, UP],
+		'note_right'	=> [D, RIGHT],
 		
 		'ui_left'		=> [A, LEFT],
 		'ui_down'		=> [S, DOWN],
@@ -266,7 +264,6 @@ class ClientPrefs {
 		FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
 		FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;
 	}
-
 	public static function copyKey(arrayToCopy:Array<FlxKey>):Array<FlxKey> {
 		var copiedArray:Array<FlxKey> = arrayToCopy.copy();
 		var i:Int = 0;

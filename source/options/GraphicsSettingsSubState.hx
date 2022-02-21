@@ -4,6 +4,7 @@ package options;
 import Discord.DiscordClient;
 #end
 import flash.text.TextField;
+import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
@@ -24,6 +25,7 @@ import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
+import openfl.Lib;
 
 using StringTools;
 
@@ -58,6 +60,7 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			'int',
 			60);
 		addOption(option);
+
 		option.minValue = 60;
 		option.maxValue = 240;
 		option.displayFormat = '%v FPS';
@@ -73,6 +76,7 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		option.onChange = onChangePersistentData; //Persistent Cached Data changes FlxGraphic.defaultPersist
 		addOption(option);
 		*/
+
 		super();
 	}
 
@@ -101,5 +105,4 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			FlxG.updateFramerate = ClientPrefs.framerate;
 		}
 	}
-
 }
